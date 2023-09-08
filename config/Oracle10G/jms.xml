@@ -1,0 +1,81 @@
+<?xml version="1.0" standalone='yes'?>
+<!DOCTYPE jms-server PUBLIC "OC4J JMS server" "http://xmlns.oracle.com/ias/dtds/jms-server-9_04.dtd">
+
+<jms-server port="9127">
+
+    <!-- Queue bindings, these queues will be bound to their respective
+         JNDI path for later retrieval -->
+    <queue name="Demo Queue" location="jms/demoQueue">
+        <description>A dummy queue</description>
+    </queue>
+
+	<queue name="WFWSResQueue" location="queue/WFWSResQueue">
+        <description>Web service async request queue</description>
+    </queue>
+
+	<topic name="JMSTopic" location="topic/JMSTopic">
+        <description>A dummy queue</description>
+    </topic>
+
+    <queue name="WFWSReqQueue" location="queue/WFWSReqQueue">
+        <description>Web service async response queue</description>
+    </queue>
+
+	<queue name="OFDefaultQueue" location="queue/OFDefaultQueue">
+		<description>OFDefaultQueue - This is Omniflow's Default Queue</description>
+	</queue>
+
+	<queue name="NewgenCreate" location="queue/NewgenCreate">
+		<description>NewgenCreate - Create WIs using External MDB</description>
+	</queue>
+	
+	<queue-connection-factory location="QueueConnectionFactory/JMSQueueConnectionFactory"/>
+	<topic-connection-factory location="TopicConnectionFactory/JMSTopicConnectionFactory"/>
+	<!-- Topic bindings, these topic will be bound to their respective
+         JNDI path for later retrieval -->
+    <topic name="Demo Topic" location="jms/demoTopic">
+        <description>A dummy topic</description>
+    </topic>
+
+    <!-- path to the log-file where JMS-events/errors are stored -->
+    <log>
+        <file path="../log/jms.log"/>
+        <!-- Uncomment this if you want to use ODL logging capabilities
+        <odl path="../log/jms/" max-file-size="1000" max-directory-size="10000"/>
+        -->
+    </log>
+
+    <queue name="jms/OracleSyndicateQueue" location="jms/OracleSyndicateQueue">
+        <description>Oracle Syndication Services Queue</description>
+    </queue>
+
+    <!--
+    <queue-connection-factory name="jms/OracleSyndicateQueueConnectionFactory"
+       location="jms/OracleSyndicateQueueConnectionFactory"/>
+   -->
+    <queue-connection-factory location="jms/OracleSyndicateQueueConnectionFactory"/>
+
+    <queue name="jms/OracleUddiReplicationQueue"
+        location="jms/OracleUddiReplicationQueue">
+        <description>Queue for replication scheduler</description>
+    </queue>
+
+    <!--
+  <queue-connection-factory
+    name="jms/OracleUddiReplicationQueueConnectionFactory"
+    location="jms/OracleUddiReplicationQueueConnectionFactory"/>
+    -->
+    <queue-connection-factory location="jms/OracleUddiReplicationQueueConnectionFactory"/>
+
+    <queue name="jms/OracleWebClippingQueue"
+        location="jms/OracleWebClippingQueue">
+        <description>Queue for Web Clipping</description>
+    </queue>
+
+    <!--
+    <queue-connection-factory
+      name="jms/OracleWebClippingQueueConnectionFactory"
+      location="jms/OracleWebClippingQueueConnectionFactory"/>
+      -->
+    <queue-connection-factory location="jms/OracleWebClippingQueueConnectionFactory"/>
+</jms-server>

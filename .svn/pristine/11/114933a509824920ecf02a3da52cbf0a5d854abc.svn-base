@@ -1,0 +1,49 @@
+Cabinet Upgrade - Points to Remember/ Pre-requisites
+----------------------------------------------------
+1. EJBs corresponding to OmniFlow version 7.x or later should be deployed on the Application Server.
+
+2. CS installed from setups of OmniFlow version 7.x or later.
+
+3. SQL files containing upgrade information stored in a directory.
+
+4. The Working directory of Application Servers contain a folder ngdbini.
+   Absolute path of the Directory mentioned in the previous step to be mentioned in WFAppContext.xml present in ngdbini,
+	<CabUpgradePath>ABSOLUTE_PATH_OF_DIRECTORY_CONTAINING_UPGRADE_FILES</CabUpgradePath>.
+
+5. SQL files must be tilde [~] separated. 
+
+6. All upgrade files must have a ".sql" extension.
+
+7. Instead of sending One lengthy upgrade file, following convention could be followed,
+	a. One Upgrade file could contain all the create/ alter tables, indexes, sequences etc.
+	b. Another Upgrade file could contain all views.
+	c. In case of Stored Procedures, One Upgrade file should contain One Procedure.
+
+8. Naming of Files is very important.
+   a. All filenames should be in same case i.e. either all are in Uppercase or all are in Lowercase.
+   b. All filenames should follow same naming convention.
+   c. Present Upgrade Code executes the filenames in Ascending Order.
+   d. All tables, view creation/ alteration scripts should be the ones to be executed first.
+	
+   For Example >>
+   a. If 10 files have been prepared for upgrade then names could be, 
+      upgrade01.sql	[This will be executed first]
+      upgrade02.sql	[This will be executed second]
+      .
+      .
+      .
+      upgrade10.sql,	[This will be executed last]
+      similarly,
+
+   b. If 100 files have been prepared for upgrade then names could be, 
+      upgrade001.sql	[This will be executed first]
+      upgrade002.sql	[This will be executed second]
+      .
+      .
+      .
+      .
+      upgrade100.sql.	[This will be executed last]
+
+   etc.
+
+9. On completion of upgradation, WFCabVersionTable can be referred to cross check which ones succeeded and which ones failed.

@@ -1,0 +1,83 @@
+Steps to create DBLink-
+
+1) CREATE EXTENSION dblink;
+
+------------------
+2) verify the extension-
+
+SELECT pg_namespace.nspname, pg_proc.proname 
+FROM pg_proc, pg_namespace 
+WHERE pg_proc.pronamespace=pg_namespace.oid 
+   AND pg_proc.proname LIKE '%dblink%';
+--------------------------
+
+3) SELECT dblink_connect('host=localhost user=postgres	password=sa dbname=post1oct');
+
+4)Create foreign data wrapper and server for global authentication.
+You can use this server object for cross database queries:
+
+
+CREATE FOREIGN DATA WRAPPER dbrnd VALIDATOR postgresql_fdw_validator;
+CREATE SERVER demodbrnd FOREIGN DATA WRAPPER dbrnd OPTIONS (hostaddr '127.0.0.1', dbname 'post1oct');
+
+----------------------------------
+
+5) Mapping of user and server:
+
+
+CREATE USER MAPPING FOR dbrnd SERVER demodbrnd OPTIONS (user 'postgres', password 'sa');
+
+
+6) verify it.
+
+SELECT * FROM public.dblink
+('demodbrnd','SELECT userIndex,userName FROM public.pdbuser') 
+AS DATA(EUserIndex INTEGER,EUserName CHARACTER VARYING);
+
+http://www.dbrnd.com/2015/05/postgresql-cross-database-queries-using/
+
+
+To Create table:-
+
+SELECT * FROM public.dblink
+('demodbrnd','Create table testa (id int, name varchar(100))') 
+AS DATA(id INT);
+
+
+truncate table example:-
+
+SELECT EUserIndex as UserIndex, EUserName as UserName FROM public.dblink
+('demodbrnd','SELECT userIndex,userName FROM public.pdbuser') 
+AS DATA(EUserIndex INTEGER,EUserName CHARACTER VARYING);
+
+SELECT * FROM public.dblink
+('demodbrnd','truncate table testa') 
+AS DATA(post varchar);
+------------------------------
+
+SELECT towns.*
+FROM dblink('dbname=post10ct','user=postgres', 'password=sa','SELECT userName, userindex FROM pdbuser')
+    AS towns(userName varchar(100), userindex integer);
+
+
+user=test_login password=123456'
+
+
+
+---------------------------------------
+
+select * into pdbuser3 from
+(SELECT * FROM public.dblink ('demodbrnd','select userindex,username from pdbuser') 
+AS DATA(userindex integer,username varchar)) as T;
+
+SELECT  column_Name_WithData 
+FROM GetColStr('pdbUSER') AS (column_Name varchar(4000), column_Name_WithData varchar(4000));
+
+SELECT * FROM public.dblink ('demodbrnd','select * from pdbuser') AS DATA();
+
+select * into pdbuser2 from pdbuser
+
+
+select * from pdbuser2
+
+--------------------------------

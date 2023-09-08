@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+
+<ejb-jar >
+
+<description>TimerServiceBean</description>
+<display-name>TimerServiceBean</display-name>
+
+<enterprise-beans>
+
+<!-- Session Beans -->
+<session>
+	<description>TimerServiceBean ( Stateless )</description>
+	<display-name>TimerServiceBean</display-name>
+	<ejb-name>TimerServiceBean</ejb-name>
+	<local-home>com.newgen.omni.jts.timer.WFTimerServiceLocalHome</local-home>
+	<local>com.newgen.omni.jts.timer.WFTimerServiceLocal</local>
+	<ejb-class>com.newgen.omni.jts.timer.WFTimerServiceBean</ejb-class>
+	<session-type>Stateless</session-type>
+	<transaction-type>Bean</transaction-type>
+	<ejb-local-ref>
+		<ejb-ref-name>com.newgen.omni.jts.timer.WFTimerServiceBean</ejb-ref-name>
+		<ejb-ref-type>Session</ejb-ref-type>
+		<local-home>com.newgen.omni.jts.timer.WFTimerServiceLocalHome</local-home>
+		<local>com.newgen.omni.jts.timer.WFTimerServiceLocal</local>
+		<ejb-link>TimerServiceBean</ejb-link>
+	</ejb-local-ref>
+</session>
+<session>
+	<description>WFServiceManagerBean ( Stateless )</description>
+	<display-name>WFServiceManagerBean</display-name>
+	<ejb-name>WFServiceManagerBean</ejb-name>
+	<local-home>com.newgen.omni.jts.txn.local.WFServiceManagerLocalHome</local-home>
+	<local>com.newgen.omni.jts.txn.WFTimerTransaction</local>
+	<ejb-class>com.newgen.omni.jts.txn.wapi.common.WFServiceManager</ejb-class>
+	<session-type>Stateless</session-type>
+	<transaction-type>Bean</transaction-type>
+	<ejb-local-ref>
+		<ejb-ref-name>com.newgen.omni.jts.timer.WFTimerServiceBean</ejb-ref-name>
+		<ejb-ref-type>Session</ejb-ref-type>
+		<local-home>com.newgen.omni.jts.timer.WFTimerServiceLocalHome</local-home>
+		<local>com.newgen.omni.jts.timer.WFTimerServiceLocal</local>
+		<ejb-link>TimerServiceBean</ejb-link>
+	</ejb-local-ref>
+</session>
+<session>
+	<description>WFTimerClientServiceHandlerBean ( Stateless )</description>
+	<display-name>WFTimerClientServiceHandlerBean</display-name>
+	<ejb-name>WFTimerClientServiceHandlerBean</ejb-name>
+	<home>com.newgen.omni.jts.txn.WFTimerClientServiceHandlerHome</home>
+	<remote>com.newgen.omni.jts.txn.WFTimerClientServiceHandlerRemote</remote>
+	<ejb-class>com.newgen.omni.jts.txn.WFTimerClientServiceHandlerBean</ejb-class>
+	<session-type>Stateless</session-type>
+	<transaction-type>Bean</transaction-type>
+	<ejb-local-ref>
+		<ejb-ref-name>WFServiceManagerBean</ejb-ref-name>
+		<ejb-ref-type>Session</ejb-ref-type>
+		<local-home>com.newgen.omni.jts.txn.local.WFServiceManagerLocalHome</local-home>
+		<local>com.newgen.omni.jts.txn.WFTimerTransaction</local>
+		<ejb-link>WFServiceManagerBean</ejb-link>
+	</ejb-local-ref>
+</session>
+
+
+</enterprise-beans>
+
+<!-- Relationships -->
+
+<!-- Assembly Descriptor -->
+<assembly-descriptor>
+<!-- transactions -->
+    <method-permission>
+      <unchecked />
+				<method >
+						<ejb-name>TimerServiceBean</ejb-name>
+						<method-name>*</method-name>
+				</method>
+    </method-permission>
+</assembly-descriptor>
+
+</ejb-jar>

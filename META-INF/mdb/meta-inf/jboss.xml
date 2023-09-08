@@ -1,0 +1,12 @@
+<jboss>
+	<enterprise-beans>
+		<message-driven>
+			<ejb-name>SetAndComplete1</ejb-name>
+			<destination-jndi-name>queue/OFDefaultQueue</destination-jndi-name>
+		</message-driven>
+		<message-driven>
+			<ejb-name>SetAndComplete2</ejb-name>
+			<destination-jndi-name>queue/NewgenCreate</destination-jndi-name>
+		</message-driven>
+	</enterprise-beans>
+</jboss>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE dfltbndngs SYSTEM "dfltbndngs.dtd">
+<dfltbndngs>
+	<module-bindings>
+		<ejb-jar-binding>
+			<jar-name>wfs_timer_ejb.jar</jar-name>
+			<ejb-bindings>
+				<ejb-binding>
+					<ejb-name>WFTimerClientServiceHandlerBean</ejb-name>
+					<jndi-name>WFTimerClientServiceHandlerBean</jndi-name>
+				</ejb-binding>
+				<ejb-binding>
+					<ejb-name>WFServiceManagerBean</ejb-name>
+					<jndi-name>WFServiceManagerBean</jndi-name>
+				</ejb-binding>
+				<ejb-binding>
+					<ejb-name>TimerServiceBean</ejb-name>
+					<jndi-name>TimerServiceBean</jndi-name>
+				</ejb-binding>
+			</ejb-bindings>
+		</ejb-jar-binding>
+	</module-bindings>
+</dfltbndngs>

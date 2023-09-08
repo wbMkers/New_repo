@@ -1,0 +1,12 @@
+<jboss>
+	<enterprise-beans>
+		<message-driven>
+			<ejb-name>WFWSReqMDB</ejb-name>
+			<destination-jndi-name>queue/WFWSReqQueue</destination-jndi-name>
+		</message-driven>
+		<message-driven>
+			<ejb-name>WFWSResMDB</ejb-name>
+			<destination-jndi-name>queue/WFWSResQueue</destination-jndi-name>
+		</message-driven>
+	</enterprise-beans>
+</jboss>

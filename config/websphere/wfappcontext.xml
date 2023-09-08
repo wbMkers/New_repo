@@ -1,0 +1,104 @@
+<ServerInfo>
+	<CallBrokerData>
+		<jndiServerName>127.0.0.1</jndiServerName>
+		<jndiServerPort>2809</jndiServerPort>
+		<ApplicationServerName>WebSphere</ApplicationServerName>
+	</CallBrokerData>
+	<HttpInfo>
+		<HTTPProtocolName>http://</HTTPProtocolName>
+		<HTTPIP>127.0.0.1</HTTPIP>
+		<HTTPPort>80</HTTPPort>
+	</HttpInfo>
+	<CabinetData>
+		<CabUpgradePath></CabUpgradePath>
+		<SyncRoutingMode>N</SyncRoutingMode>
+		<WorkflowReport>
+			<ReportFolders>
+				<ReportFolder>
+					<ReportFolderName>Performance</ReportFolderName>
+					<Report>
+						<ReportName>Process History Report</ReportName>
+						<ReportUrl>/processmanager/report/processhistory/process_history_frameset.jsp?ActivityListCallFlag=N&ProcessListCallFlag=Y</ReportUrl>
+					</Report>
+					<Report>
+						<ReportName>User Performance Report</ReportName>
+						<ReportUrl>/processmanager/report/userperformance/user_performance_frameset.jsp?ActivityListCallFlag=N&ProcessListCallFlag=Y</ReportUrl>
+					</Report>
+					<Report>
+						<ReportName>User Performance Comparision Report</ReportName>
+						<ReportUrl>/processmanager/report/userperformancecomp/userperf_compare_frameset.jsp?ActivityListCallFlag=N&ProcessListCallFlag=Y</ReportUrl>
+					</Report>
+					<Report>
+						<ReportName>Average Process Time Report</ReportName>
+						<ReportUrl>/processmanager/report/averageprocesstime/avg_process_time_frameset.jsp?ActivityListCallFlag = N&ProcessListCallFlag=Y</ReportUrl>
+					</Report>
+					<Report>
+						<ReportName>Participant Report</ReportName>
+						<ReportUrl>/processmanager/report/participantaveragetime/pat_frameset.jsp?ActivityListCallFlag=N&ProcessListCallFlag=Y</ReportUrl>
+					</Report>
+					<Report>
+						<ReportName>Participant Processing Time Report</ReportName>
+						<ReportUrl>/processmanager/report/participantprocessingtime/partproc_frameset.jsp?ActivityListCallFlag=N&ProcessListCallFlag=Y</ReportUrl>
+					</Report>		
+				</ReportFolder>
+				<ReportFolder>
+					<ReportFolderName>Statistics</ReportFolderName>
+					<Report>
+						<ReportName>Delay Report</ReportName>
+						<ReportUrl>/processmanager/report/delay/delay_frameset.jsp?ProcessListCallFlag=Y</ReportUrl>
+					</Report>
+					<Report>
+						<ReportName>Turn Around Time Report</ReportName>
+						<ReportUrl>/processmanager/report/turnaroundtime/tat_frameset.jsp?ProcessListCallFlag=Y</ReportUrl>
+					</Report>
+				</ReportFolder>			
+				<ReportFolder>
+					<ReportFolderName>Miscellaneous</ReportFolderName>
+					<Report>
+						<ReportName>Process Defintion Summary Report</ReportName>
+						<ReportUrl>/processmanager/report/processdefinition/process_def_summary_frameset.jsp</ReportUrl>
+					</Report>
+					<Report>
+						<ReportName>Exception Details Report</ReportName>
+						<ReportUrl>/processmanager/report/exceptiondetails/exception_details_frameset.jsp?ActivityListCallFlag=N&ProcessListCallFlag=Y</ReportUrl>
+					</Report>
+					<Report>
+						<ReportName>Expired Workitem Report</ReportName>
+						<ReportUrl>/processmanager/report/expiry/expiry_frameset.jsp</ReportUrl>
+					</Report>
+					<Report>
+						<ReportName>Diversion Report</ReportName>
+						<ReportUrl>/processmanager/report/diversion/diversion_frameset.jsp?</ReportUrl>
+					</Report>	
+					<Report>
+						<ReportName>Temporary Queue Assignment Report</ReportName>
+						<ReportUrl>/processmanager/report/queueassign/queueassign_frameset.jsp?</ReportUrl>
+					</Report>
+				</ReportFolder>
+			</ReportFolders>
+		</WorkflowReport>
+	</CabinetData>
+	<ContextData>
+		<Applications>
+			<Application>
+				<ApplicationName>WRITE_APP_NAME_HERE</ApplicationName>
+				<Context>
+					<ProviderUrl></ProviderUrl>
+					<jndiServerName></jndiServerName>
+					<jndiServerPort></jndiServerPort>
+					<JndiContextFactory></JndiContextFactory>
+				</Context>
+			</Application>
+		</Applications>
+	</ContextData>
+	<SAPData>
+		<SAPJCoVersion></SAPJCoVersion>
+	</SAPData>
+	<ThresholdTime>1000</ThresholdTime>
+	<ThresholdSize>1024</ThresholdSize>
+	<NotifyByEmail>Y</NotifyByEmail>
+	<MaxProcessInstanceCount>50</MaxProcessInstanceCount>
+	<OFQueryTimeOut>60</OFQueryTimeOut> <!-- 60 Seconds -->	
+		<DateTimeFormat>yyyy-MM-dd HH:mm:ss</DateTimeFormat>
+	<MailFromEmailId>OmniFlowSystem_do_not_reply@newgen.co.in</MailFromEmailId>
+</ServerInfo>

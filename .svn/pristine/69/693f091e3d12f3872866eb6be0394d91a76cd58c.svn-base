@@ -1,0 +1,57 @@
+<Encoding>ISO8859_1</Encoding>
+<LogPath>Replication.log</LogPath>
+<SMSTimeOut>60000</SMSTimeOut>
+<SMSReadInterval>30000</SMSReadInterval>
+<SMSRetryCount>5</SMSRetryCount>
+<SMSGenerateLog>true</SMSGenerateLog>
+<IsJNDI>false</IsJNDI>
+<ProviderUrl>jnp://</ProviderUrl>
+<jndiServerName>192.168.4.167</jndiServerName> 
+<jndiServerPort>1099</jndiServerPort>
+<JndiContextFactory>org.jnp.interfaces.NamingContextFactory</JndiContextFactory>
+<LookupBean>com.newgen.omni.jts.txn.NGOClientServiceHandlerHome</LookupBean>
+<J2eeServersList>
+        <ServerInfo>
+		<IsJNDI>false</IsJNDI>
+                <ProviderUrl>corbaloc:iiop:</ProviderUrl>
+                <jndiServerName>192.168.5.150</jndiServerName> 
+                <jndiServerPort>2809/NameServiceServerRoot</jndiServerPort>
+                <JndiContextFactory>com.sun.jndi.cosnaming.CNCtxFactory</JndiContextFactory>
+                <LookupBean>com\.newgen\.omni\.jts\.txn\.NGOClientServiceHandlerHome</LookupBean>
+	</ServerInfo>
+	<ServerInfo>
+		<IsJNDI>false</IsJNDI>
+		<ProviderUrl>jnp://</ProviderUrl>
+		<jndiServerName>192.168.4.167</jndiServerName> 
+		<jndiServerPort>1099</jndiServerPort>
+		<JndiContextFactory>org.jnp.interfaces.NamingContextFactory</JndiContextFactory>
+		<LookupBean>com.newgen.omni.jts.txn.NGOClientServiceHandlerHome</LookupBean>
+	</ServerInfo>
+	<ServerInfo>
+		<IsJNDI>false</IsJNDI>
+		<ProviderUrl>ormi://</ProviderUrl>
+		<jndiServerName>192.168.5.211</jndiServerName> 
+		<jndiServerPort>3300/omnidocs_ejb</jndiServerPort>
+		<JndiContextFactory>com.evermind.server.ApplicationClientInitialContextFactory</JndiContextFactory>
+		<LookupBean>com.newgen.omni.jts.txn.NGOClientServiceHandlerHome</LookupBean>
+	</ServerInfo>
+</J2eeServersList>
+<Cabinets>
+    <Cabinet>
+        <CabinetName>pora7</CabinetName>
+        <Sites>
+        </Sites>
+		<IsJNDI>true</IsJNDI>
+		<ProviderUrl>jnp://</ProviderUrl>
+		<jndiServerName>192.168.4.167</jndiServerName> 
+		<jndiServerPort>1099</jndiServerPort>
+		<JndiContextFactory>org.jnp.interfaces.NamingContextFactory</JndiContextFactory>
+		<LookupBean>com.newgen.omni.jts.txn.NGOClientServiceHandlerHome</LookupBean>
+    </Cabinet>
+</Cabinets>
+<ISPACKTIMELOG>false</ISPACKTIMELOG>
+<ISCLUSTER>false</ISCLUSTER>
+<ClusterSMSIp1>132.190.2.35</ClusterSMSIp1>
+<ClusterSMSPort1>900</ClusterSMSPort1>
+<ClusterSMSIp2>132.190.2.36</ClusterSMSIp2>
+<ClusterSMSPort2>900</ClusterSMSPort2>

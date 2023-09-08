@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ClientInfo>
+	<ProviderUrl>jnp://</ProviderUrl>
+	<jndiServerName>127.0.0.1</jndiServerName>
+	<jndiServerPort>1099</jndiServerPort>
+	<ApplicationServerName>JBoss</ApplicationServerName>
+	<JndiContextFactory>org.jnp.interfaces.NamingContextFactory</JndiContextFactory>
+	<WFSHLookupName>WFCustomClientServiceHandlerBean</WFSHLookupName>
+	<Debug>
+			<TransactionLog>True</TransactionLog>
+			<XMLLog>True</XMLLog>
+	</Debug>
+</ClientInfo>

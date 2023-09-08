@@ -1,0 +1,40 @@
+ 
+  /*__________________________________________________________________________________;
+	NEWGEN SOFTWARE TECHNOLOGIES LIMITED;
+	Group                       : Genesis;
+	Product / Project           : IBPS;
+	Module                      : IBPS Server;
+	File Name                   : CreateDBLink.txt (MSSQL)
+	Author                      : Kahkeshan
+	Date written (DD/MM/YYYY)   : 12 MAY 2014
+	Description                 : Steps For Creating DBLink
+	____________________________________________________________________________________;
+	CHANGE HISTORY;
+	____________________________________________________________________________________;
+	Date        Change By        Change Description (Bug No. (IF Any))
+	____________________________________________________________________________________*/	
+				
+	** Following are the steps to create databaselinks in SQL server. These steps to be executed on source machine.
+	
+	1. EXEC sp_addlinkedserver     @server='remotemachineip'      -- Need to have a sysadmin permission to execute this procedure
+ 
+	2. EXEC sp_addlinkedsrvlogin   @rmtsrvname='remotemachineip',@useself='false', @rmtuser='remoteusername', @rmtpassword='remotepassword'
+	
+	Example for creating a DBLink where source database machine ip is '192.168.74.116' and Remote Database Machine Ip is '192.168.6.238'
+	EXEC sp_addlinkedserver     @server='192.168.6.238'
+	EXEC sp_addlinkedsrvlogin @rmtsrvname='192.168.6.238',@useself='false', @rmtuser='gendbmuser', @rmtpassword='gendbuat123#'
+	
+	Execute queries on source machine as for example
+	select * from [192.168.6.238].ibpms21april.dbo.processdeftable
+	
+	** Following are the steps for dropping linked server after use :
+	
+	1. EXEC sp_droplinkedsrvlogin 'remotemachineip', NULL
+	2. EXEC sp_dropserver @server = 'remotemachineip'
+ 
+	Example for dropping a DBLink where source database machine ip is '192.168.74.116' and Remote Database Machine Ip is '192.168.6.238'
+
+	EXEC sp_droplinkedsrvlogin '192.168.6.238', NULL
+	EXEC sp_dropserver @server = '192.168.6.238'
+	
+	

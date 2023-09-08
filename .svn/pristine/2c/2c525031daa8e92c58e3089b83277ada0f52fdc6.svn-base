@@ -1,0 +1,29 @@
+1. Create directory for your application (Test)
+2. Create directory for your web application (WebTest)
+3. In \WebTest put all JSP files.
+4. Create \WebTest\WEB-INF directory.
+5. Place web.xml (the one you placed here) and orion-web.xml (the one you placed here, editied as I said earlier) in WEB-INF
+6. Create \WEB-INF\classes directory.
+7. Create \WEB-INF\classes\testing directory.
+8. Place TesterHome and TesterRemote inside the testing directory.
+9. Create your WAR file.
+10. Create directory for your EJB (JarTest)
+11. Create directory \JarTest\testing
+12. Place all EJB code in testing directory (assuming the EJB-bean class is in the testing package).
+13. Create \JarTest\META-INF
+14. Place ejb-jar.xml (the one you placed here) inside the META-INF directory.
+15. Create your JAR file.
+16. Create \Test\META-INF directory.
+17. Place application.xml (similar to the one you placed here, but make sure the JAR and WAR names are correct) in the META-INF directory.
+18. Create the EAR file (let's say test.ear).
+19. Copy test.ear to OC4J_HOME\applications
+20. Add line to server.xml - <application name="Test" path="../applications/test.ear" />
+21. Add line to http-web-site.xml - <web-app application="Test" name="<<name of your war file>>" root="/Test" />
+22. No need to put lines in application.xml
+23. Run OC4J (java -jar oc4j.jar)
+24. Open your browser on http://localhost:8888/Test/jsp-file-name.jsp
+
+
+
+com.evermind.server.rmi.RMIInitialContextFactory
+<JndiContextFactory>com.evermind.server.ApplicationClientInitialContextFactory</JndiContextFactory>

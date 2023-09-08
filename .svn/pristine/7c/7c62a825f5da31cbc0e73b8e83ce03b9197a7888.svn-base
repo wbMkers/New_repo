@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>OmniFlow - User Diversion Notification</title>
+<meta Data = "<Subject> OmniFlow Diversion Notification - User Diversion &<Operation>& </Subject>" >
+<meta HTTP-EQUIV="content-type" CONTENT="text/html;charset=<%=UTF-8%>">
+</head>
+<body aLink="#008000" background bgColor="#ffffff" leftMargin="3" link="#008000" topMargin="0" vLink="#008000">
+<table border="0" cellSpacing="1" width="100%">
+<tr>
+<td width="60%"><h1><font face="arial" color="green">Newgen OmniFlow</font></h1></td>
+<td vAlign="bottom" width="40%" align="left"><font face="arial" size="2" color="blue">
+</font></td>
+</tr>
+<tr>
+<td colSpan="2" width="100%"><hr align="left"></td>
+</tr>
+<tr>
+<td colSpan="2" width="100%" align="center">
+<table border="0" cellSpacing="1" width="100%">
+<tr>
+<td width="75%" height="25" align="left">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="75%" valign="top" align="left" align="center">
+<table border="0" cellspacing="1" width="99%">
+<tr>
+<td width="20%"><font color="#0000FF" face="Arial" size="2">Diversion Set For :</font></td>
+<td width="30%"><font color="#000000" face="Arial" size="2"> &<Diverteduser>& </font></td>
+<td width="20%"><font color="#0000FF" face="Arial" size="2">Assigned To User:</font></td>
+<td width="30%"><font color="#000000" face="Arial" size="2"> &<AssignedToUser>& </font></td>
+</tr>
+<tr Style = "display : &<Display>&">
+<td width="20%"><font color="#0000FF" face="Arial" size="2">From Date:</font></td>
+<td width="30%"><font color="#000000" face="Arial" size="2"> &<FromDate>& </font></td>
+<td width="20%"><font color="#0000FF" face="Arial" size="2">To Date:</font></td>
+<td width="30%"><font color="#000000" face="Arial" size="2"> &<ToDate>& </font></td>
+</tr>
+<tr Style = "display : &<Display>&">
+<td width="20%"><font color="#0000FF" face="Arial" size="2">AssignCurrentWorkItems :</font></td>
+<td width="30%"><font color="#000000" face="Arial" size="2"> &<AssignCurrentWorkItems>& </font></td>
+<td width="20%"><font color="#0000FF" face="Arial" size="2">DivertBackAssignedWorkItems :</font></td>
+<td width="30%"><font color="#000000" face="Arial" size="2"> &<DivertBackWorkItems>& </font></td>
+</tr>
+<tr>
+<td width="100%" colspan="4"><span style="font-family: Arial; font-size: 8pt"><font color="#0000FF"></font></span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="75%" height="25" bgcolor="#DBEEDE" ><p><font size="2" color="black" face="arial"><b>IMPORTANT :</b><strong> </strong></font>
+</td>
+</tr>
+<tr>
+<td height="27"><font size="2" color="black" face="arial">
+<br>This is to inform that diversion has been &<Operation>& for the user &<Diverteduser>& </u></b></font><br><br>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colSpan="2" width="100%"><hr align="left">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

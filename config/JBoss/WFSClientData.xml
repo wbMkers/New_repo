@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ClientInfo>
+	<ProviderUrl>jnp://</ProviderUrl>
+	<jndiServerName>127.0.0.1</jndiServerName>
+	<jndiServerPort>1099</jndiServerPort>
+	<ApplicationServerName>JBoss</ApplicationServerName>
+</ClientInfo>

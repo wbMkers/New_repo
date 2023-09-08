@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC '-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN' 'http://java.sun.com/dtd/ejb-jar_2_0.dtd'>
+<ejb-jar>
+	<enterprise-beans>
+		<session>
+			<description>WFCustomBean ( Stateless )</description>
+			<display-name>WFCustomBean</display-name>
+			<ejb-name>WFCustomBean</ejb-name>
+			<local-home>com.newgen.omni.jts.txn.clocal.WFCustomLocalHome</local-home>
+			<local>com.newgen.omni.jts.txn.WFCustomTransaction</local>
+			<ejb-class>com.newgen.omni.jts.txn.cust.WFCustomBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Bean</transaction-type>
+		</session>
+		<session>
+			<description>WFCustomClientServiceHandlerBean ( Stateless )</description>
+			<display-name>WFCustomClientServiceHandlerBean</display-name>
+			<ejb-name>WFCustomClientServiceHandlerBean</ejb-name>
+			<home>com.newgen.omni.jts.txn.WFCustomClientServiceHandlerHome</home>
+			<remote>com.newgen.omni.jts.txn.WFCustomClientServiceHandlerRemote</remote>
+			<ejb-class>com.newgen.omni.jts.txn.WFCustomClientServiceHandlerBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Bean</transaction-type>
+			<ejb-local-ref>
+				<ejb-ref-name>WFCustomBean</ejb-ref-name>
+				<ejb-ref-type>Session</ejb-ref-type>
+				<local-home>com.newgen.omni.jts.txn.clocal.WFCustomLocalHome</local-home>
+				<local>com.newgen.omni.jts.txn.WFCustomTransaction</local>
+				<ejb-link>WFCustomBean</ejb-link>
+			</ejb-local-ref>
+		</session>
+	</enterprise-beans>
+</ejb-jar>

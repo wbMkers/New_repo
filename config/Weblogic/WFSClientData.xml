@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ClientInfo>
+	<ProviderUrl>t3://</ProviderUrl>
+	<jndiServerName>127.0.0.1</jndiServerName>
+	<jndiServerPort>7001</jndiServerPort>
+	<ApplicationServerName>WebLogic</ApplicationServerName>
+</ClientInfo>

@@ -1,0 +1,1 @@
+ALTER TABLE ISDoc ADD ArchiveFlag CHAR(1) DEFAULT 'N'

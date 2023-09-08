@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE dfltbndngs SYSTEM "dfltbndngs.dtd">
+<dfltbndngs>
+	<module-bindings>
+		<ejb-jar-binding>
+			<jar-name>wfcustom_ejb.jar</jar-name>
+			<ejb-bindings>
+				<ejb-binding>
+					<ejb-name>WFCustomBean</ejb-name>
+					<jndi-name>com.newgen.omni.jts.txn.cust.WFCustomBean</jndi-name>
+				</ejb-binding>
+				<ejb-binding>
+					<ejb-name>WFCustomClientServiceHandlerBean</ejb-name>
+					<jndi-name>WFCustomClientServiceHandlerBean</jndi-name>
+				</ejb-binding>
+			</ejb-bindings>
+		</ejb-jar-binding>
+	</module-bindings>
+</dfltbndngs>

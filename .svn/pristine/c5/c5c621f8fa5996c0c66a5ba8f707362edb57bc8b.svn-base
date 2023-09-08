@@ -1,0 +1,9 @@
+<Transactions>		
+	<Transaction>
+		<Name>WRITE_YOUR_API_NAME_HERE</Name>
+		<Path>com.newgen.omni.jts.client.WFSCustomEjbApi</Path>
+	</Transaction>
+</Transactions>		
+
+
+

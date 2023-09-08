@@ -1,0 +1,16 @@
+1) Need to work-
+
+SetAndMigrateMetaData ---> WFMigrateMetaData---->
+
+		WFMigrateProcessData,
+		WFPopulateMetaData,
+		WFMigrateVariantMetaData, 
+		WFMoveMetaData , 
+		WFMoveQueueData ,  
+		WFMoveOmnidocsFolderData  ,
+		WFExportExternalTable , 
+		WFExportTaskTables, 
+		WFMigrateVariantMetaData  , 
+		
+	WFCreatePartitions---------------
+	Table WFFailedMetaDataMigrationLog  need to create table

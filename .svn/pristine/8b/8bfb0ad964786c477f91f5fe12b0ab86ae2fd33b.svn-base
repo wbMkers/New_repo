@@ -1,0 +1,64 @@
+set servername server1
+
+set cellname [$AdminControl getCell]
+set nodename [$AdminControl getNode]
+
+set installroot $env(was.install.root)
+set profilename default
+
+set attrs_omnidocs_ejb [list -node $nodename -server $servername -appname omnidocs_ejb]
+set attrs_wfs_ejb [list -node $nodename -server $servername -appname wfs_ejb -usedefaultbindings -defaultbinding.force -defaultbinding.strategy.file {wfs_ejb_binding.xml}]
+set attrs_wfcustom_ejb [list -node $nodename -server $servername -appname wfcustom_ejb -usedefaultbindings -defaultbinding.force -defaultbinding.strategy.file {wfcustom_ejb_binding.xml}]
+set attrs_dashboard_ejb [list -node $nodename -server $servername -appname dashboard_ejb -usedefaultbindings -defaultbinding.force -defaultbinding.strategy.file {dashboard_ejb_binding.xml}]
+set attrs_setandcomplete_mdb [list -node $nodename -server $servername -appname SetAndComplete -usedefaultbindings -defaultbinding.force -defaultbinding.strategy.file {setandcomplete_binding.xml}]
+
+puts "This is a script file for deploying Omniflow Server components"
+puts "the cell name is $cellname"
+puts "the node name is $nodename"
+puts "the server name is $servername"
+
+set application [$AdminApp list]
+
+foreach app $application {
+if {$app=="omnidocs_ejb"} {
+puts "undeploying omnidocs_ejb"
+puts "[$AdminApp uninstall omnidocs_ejb]"
+puts "[$AdminConfig save]"
+}
+if {$app=="wfs_ejb"} {
+puts "undeploying wfs_ejb"
+puts "[$AdminApp uninstall wfs_ejb]"
+puts "[$AdminConfig save]"
+}
+if {$app=="wfcustom_ejb"} {
+puts "undeploying wfcustom_ejb"
+puts "[$AdminApp uninstall wfcustom_ejb]"
+puts "[$AdminConfig save]"
+}
+if {$app=="dashboard_ejb"} {
+puts "undeploying dashboard_ejb"
+puts "[$AdminApp uninstall dashboard_ejb]"
+puts "[$AdminConfig save]"
+}
+if {$app=="SetAndComplete"} {
+puts "undeploying SetAndComplete"
+puts "[$AdminApp uninstall SetAndComplete]"
+puts "[$AdminConfig save]"
+}
+}
+
+puts "Deploying omnidocs_ejb.jar"
+puts "[$AdminApp install $installroot/profiles/$profilename/installableApps/omnidocs_ejb.jar $attrs_omnidocs_ejb]"
+puts "[$AdminConfig save]"
+puts "Deploying wfs_ejb.jar"
+puts "[$AdminApp install $installroot/profiles/$profilename/installableApps/wfs_ejb.jar $attrs_wfs_ejb]"
+puts "[$AdminConfig save]"
+puts "Deploying wfcustom_ejb.jar"
+puts "[$AdminApp install $installroot/profiles/$profilename/installableApps/wfcustom_ejb.jar $attrs_wfcustom_ejb]"
+puts "[$AdminConfig save]"
+puts "Deploying dashboard_ejb.jar"
+puts "[$AdminApp install $installroot/profiles/$profilename/installableApps/dashboard_ejb.jar $attrs_dashboard_ejb]"
+puts "[$AdminConfig save]"
+puts "Deploying SetAndComplete.jar"
+puts "[$AdminApp install $installroot/profiles/$profilename/installableApps/SetAndComplete.jar $attrs_setandcomplete_mdb]"
+puts "[$AdminConfig save]"

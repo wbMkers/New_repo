@@ -1,0 +1,20 @@
+CREATE OR REPLACE FUNCTION
+update_customers(
+p_first_name varchar, 
+p_last_name varchar, 
+p_type varchar(2)
+)
+RETURNS varchar AS $$
+DECLARE
+ v_result varchar(250);
+ v_id numeric;
+BEGIN
+ SELECT id into v_id FROM customers 
+ WHERE first_name = p_first_name 
+ AND last_name = p_last_name;
+ if v_id is not null then
+    v_result:='OK customer';
+ end if;    
+ return v_result;
+END;
+$$LANGUAGE plpgsql;

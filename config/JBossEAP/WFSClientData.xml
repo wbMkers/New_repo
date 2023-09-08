@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ClientInfo>
+	<ProviderUrl>remote://</ProviderUrl>
+	<jndiServerName>127.0.0.1</jndiServerName>
+	<jndiServerPort>4447</jndiServerPort>
+	<ApplicationServerName>JBossEAP</ApplicationServerName>
+</ClientInfo>

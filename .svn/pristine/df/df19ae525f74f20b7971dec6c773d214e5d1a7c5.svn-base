@@ -1,0 +1,34 @@
+<ServerConfigParam>
+<CabinetData>
+		<CabUpgradePath></CabUpgradePath>
+		<UpgradePathForOmnidocsCabinet></UpgradePathForOmnidocsCabinet>
+		<SyncRoutingMode>N</SyncRoutingMode>
+		<LikeSearchEnabled>N</LikeSearchEnabled>
+		<CallApisOnTaskExpiry>N</CallApisOnTaskExpiry>
+		<HookEnableOnError>N</HookEnableOnError>
+		<AllowAdhocRouteForChild>N</AllowAdhocRouteForChild>
+		<SoftDeleteForArray>N</SoftDeleteForArray>
+		<HistoryLoggingOnTarget>N</HistoryLoggingOnTarget>
+</CabinetData>
+	<ThresholdTime>5000</ThresholdTime>
+	<ThresholdSize>102400</ThresholdSize>
+	<ThresholdRecord>2000</ThresholdRecord>
+	<NotifyByEmail>Y</NotifyByEmail>
+	<MaxProcessInstanceCount>50</MaxProcessInstanceCount>
+	<OFQueryTimeOut>60</OFQueryTimeOut> <!-- 60 Seconds -->
+	<DateTimeFormat>yyyy-MM-dd HH:mm:ss</DateTimeFormat>
+	<MailFromEmailId>OmniFlowSystem_do_not_reply@newgen.co.in</MailFromEmailId>
+	<BypassTrustedCertificateCheck>N</BypassTrustedCertificateCheck> <!-- checkmarx changes ss -->
+	<OFScripts>
+		Upgrade10_3_SP0.sql#Upgrade10_0_SP0.sql#Upgrade09_SP06_002_DataTypesandChecks.sql#Upgrade09_SP06_001.sql#Upgrade09_SP00_013_history.sql#
+		Upgrade09_SP00_012.sql#Upgrade09_SP00_011.sql#Upgrade09_SP00_010_Transaction.SQL#Upgrade09_SP00_010.sql#Upgrade09_SP00_009.sql#
+		Upgrade09_SP00_008.sql#Upgrade09_SP00_007.sql#Upgrade09_SP00_006_Transaction.SQL#Upgrade09_SP00_006.sql#Upgrade09_SP00_005.sql#
+		Upgrade09_SP00_004.sql#Upgrade09_SP00_003.sql#Upgrade09_SP00_002.sql#Upgrade09_SP00_001_Transaction.SQL#Upgrade09_SP00_001.sql#
+		Upgrade09_SP06_003_MessageIdLogId.sql#Upgrade09_SP00_009_history.sql#Upgrade09_SP06_003_Indexes.sql
+	</OFScripts><!-- Added to skip scripts if the cabinet to be upgraded is of iBPS Level -->
+	<SEARCH_QUERY_HINT></SEARCH_QUERY_HINT>
+	<iBPSScripts>ZUpgradeIBPS_A_OFserver_4_RightMgmt.sql</iBPSScripts>
+	<ComplexDefaultBatchSize>100</ComplexDefaultBatchSize>
+	<HideEmailIdInLog>N</HideEmailIdInLog>
+	<QueueTypeForFecthWorklist>I,D,N,F,M,H,G,S,O</QueueTypeForFecthWorklist>
+</ServerConfigParam>

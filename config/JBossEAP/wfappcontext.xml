@@ -1,0 +1,33 @@
+<ServerInfo>
+	<CallBrokerData>
+		<jndiServerName>127.0.0.1</jndiServerName>
+		<jndiServerPort>4447</jndiServerPort>
+		<ApplicationServerName>JBossEAP</ApplicationServerName>
+	</CallBrokerData>
+	<TimerServiceLookUpData>
+		<TimerServiceLookUpPrefix>java:app/wfs_timer_ejb/</TimerServiceLookUpPrefix>
+		<TimerServiceLookUpSuffix>!com.newgen.omni.jts.timer.WFTimerServiceHome</TimerServiceLookUpSuffix>	
+	</TimerServiceLookUpData>
+	<HttpInfo>
+		<HTTPProtocolName>http://</HTTPProtocolName>
+		<HTTPIP>127.0.0.1</HTTPIP>
+		<HTTPPort>80</HTTPPort>
+	</HttpInfo>
+	<ContextData>
+		<Applications>
+			<Application>
+				<ApplicationName>WRITE_APP_NAME_HERE</ApplicationName>
+				<Context>
+					<ProviderUrl></ProviderUrl>
+					<jndiServerName></jndiServerName>
+					<jndiServerPort></jndiServerPort>
+					<JndiContextFactory></JndiContextFactory>
+				</Context>
+			</Application>
+		</Applications>
+	</ContextData>
+	<SAPData>
+		<SAPJCoVersion></SAPJCoVersion>
+	</SAPData>
+	
+</ServerInfo>

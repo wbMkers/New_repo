@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration>
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+   <appender name="consoleLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/Console.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS}] - %m%n%n"/>
+	  </layout>
+	    <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+   </appender>
+   
+    <appender name="XMLLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/XML.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	    <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+   </appender>
+   
+   <appender name="errorLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/Error.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+   </appender>
+   
+    <appender name="transactionLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/Transaction.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+   </appender>
+   
+     <appender name="JMSLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/JMS.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	  <appender name="PSOutLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/PSOut.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	 <appender name="PSErrLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/PSErr.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	 <appender name="PSXMLLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/PSXML.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	 <appender name="WSOutLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/WSOut.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	 <appender name="WSErrLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/WSErr.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	 <appender name="WSXMLLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/WSXML.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	 <appender name="WSResLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/WSRes.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	 <appender name="WSReqLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/WSReq.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	 <appender name="SAPOutLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/SAPOut.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	 <appender name="SAPErrLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/SAPErr.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	 <appender name="SAPXMLLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/SAPXML.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+	 <appender name="WFTimeThresholdLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/TimeThld.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+   
+   	 <appender name="WFSizeThresholdLogger" class="org.apache.log4j.RollingFileAppender">
+      <param name="File" value="${OF_Log_Folder}/SizeThld.log"/>
+      <param name="Threshold" value="DEBUG"/>
+	  <layout class="org.apache.log4j.PatternLayout">
+        <param name="ConversionPattern" value="[OF SERVER \: %c \: %-5p \: %d{dd MMM yyyy HH\:mm\:ss,SSS} \: %-5p] - %m%n%n"/>
+	  </layout>
+	     <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+     </appender>
+	 
+   <logger name="com.newgen">
+      <level value="DEBUG"/>
+   </logger>
+   
+   <logger name="com.newgen.omniflow.consoleLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="consoleLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.XMLLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="XMLLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.errorLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="errorLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.transactionLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="transactionLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.JMSLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="JMSLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.PSOutLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="PSOutLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.PSErrLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="PSErrLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.PSXMLLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="PSXMLLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.WSOutLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="WSOutLogger"/>  
+   </logger>
+
+   <logger name="com.newgen.omniflow.WSErrLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="WSErrLogger"/>  
+   </logger>
+   
+    <logger name="com.newgen.omniflow.WSXMLLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="WSXMLLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.WSResLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="WSResLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.WSReqLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="WSReqLogger"/>  
+   </logger>
+   
+    <logger name="com.newgen.omniflow.SAPOutLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="SAPOutLogger"/>  
+   </logger>
+   
+    <logger name="com.newgen.omniflow.SAPErrLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="SAPErrLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.SAPXMLLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="SAPXMLLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.WFTimeThresholdLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="WFTimeThresholdLogger"/>  
+   </logger>
+   
+   <logger name="com.newgen.omniflow.WFSizeThresholdLogger">  
+     <level value="DEBUG"/>  
+     <appender-ref ref="WFSizeThresholdLogger"/>  
+   </logger>
+</log4j:configuration>

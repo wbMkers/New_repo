@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE dfltbndngs SYSTEM "dfltbndngs.dtd">
+<dfltbndngs>
+	<module-bindings>
+		<ejb-jar-binding>
+			<jar-name>dashboard_ejb.jar</jar-name>
+			<ejb-bindings>
+				<ejb-binding>
+					<ejb-name>WMADBPreferencesBean</ejb-name>
+					<jndi-name>com.newgen.omni.jts.txn.wapi.WMADBPreferences</jndi-name>
+				</ejb-binding>
+				<ejb-binding>
+					<ejb-name>WMListUserReportsBean</ejb-name>
+					<jndi-name>com.newgen.omni.jts.txn.wapi.WMListUserReports</jndi-name>
+				</ejb-binding>
+				<ejb-binding>
+					<ejb-name>WMRegisterReportsBean</ejb-name>
+					<jndi-name>com.newgen.omni.jts.txn.wapi.WMRegisterReports</jndi-name>
+				</ejb-binding>
+				<ejb-binding>
+					<ejb-name>WMReportDataBean</ejb-name>
+					<jndi-name>com.newgen.omni.jts.txn.wapi.WMReportData</jndi-name>
+				</ejb-binding>
+				<ejb-binding>
+					<ejb-name>WMReportDefinitionBean</ejb-name>
+					<jndi-name>com.newgen.omni.jts.txn.wapi.WMReportDefinition</jndi-name>
+				</ejb-binding>
+				<ejb-binding>
+					<ejb-name>DBClientServiceHandlerBean</ejb-name>
+					<jndi-name>DBClientServiceHandlerBean</jndi-name>
+				</ejb-binding>
+			</ejb-bindings>
+		</ejb-jar-binding>
+	</module-bindings>
+</dfltbndngs>

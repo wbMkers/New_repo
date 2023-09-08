@@ -1,0 +1,99 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!--  ------------------------------------------------------------------------- -->
+<!--                 NEWGEN SOFTWARE TECHNOLOGIES LIMITED						-->
+<!--             Group				: Application - Products					-->
+<!--             Product / Project	: Omniflow 6.0								-->
+<!--             Module				: Mailing Utility							-->
+<!--             File Name			: template.htm								-->
+<!--             Date written		: 05/09/2017								-->
+<!--             Description		: Template for sending the mails for various-->
+<!--									actionIDs in case Management			-->
+<!--  ------------------------------------------------------------------------- -->
+<!--                          CHANGE HISTORY									-->
+<!--  ------------------------------------------------------------------------- -->
+<!--	Changed By		Date			Description								-->
+<!--  ------------------------------------------------------------------------- -->
+<!--	Ambuj Tripathi	05/09/2017		First version of file created			-->
+<!--																			-->
+<!--																			-->
+<!--  ------------------------------------------------------------------------- -->
+<!--				saved from url=(0022)http://internet.e-mail					-->
+<!--  ------------------------------------------------------------------------- -->
+<html>
+
+<head>
+    <title>iBPS - Task Notification</title>
+    <meta HTTP-EQUIV="content-type" CONTENT="text/html;charset=<%=UTF-8%>">
+</head>
+
+<body aLink="#008000" background bgColor="#ffffff" leftMargin="3" link="#008000" topMargin="0" vLink="#008000">
+    <form name="textForm" action="&<WebServerAddress>&/webdesktop/workitem/view/mailclient.jsp" method="Post" target="_blank">
+        <input type="hidden" name="CalledFrom" value=M>
+        <input type="hidden" name="UserName" value="&<AssignedTo>&">
+        <input type="hidden" name="EngineName" value="&<EngineName>&">
+        <input type="hidden" name="ProcessInstanceId" value="&<ProcessInstanceId>&">
+        <input type="hidden" name="WorkitemId" value="&<WorkItemId>&">
+        <input type="hidden" name="QueueId" value="&<QueueId>&">
+        <font face="Calibri" size="3"><p>Dear User,</p></font>
+        <font face="Calibri" size="3"><p>Task &ndash; <strong>&<TaskName>& </strong>has been initiated, following are the details of the initiated task:</p></font>
+        <font size="3">
+		<table border="0" cellspacing="1" width="50%" style>
+			<tr>
+				<td width="15%"><font face="Calibri" size="3"><strong>Process Name</strong></font></td>
+				<td width="35%"><font face="Calibri" size="3">: &<RouteName>& </font></td>
+			</tr>
+			<tr>
+				<td width="15%"><font face="Calibri" size="3"><strong>Case Id</strong></font></td>
+				<td width="35%"><font face="Calibri" size="3">: &<ProcessInstanceId>& </font></td>
+			</tr>
+			<tr>
+				<td width="15%"><font face="Calibri" size="3"><strong>Task Name</strong></font></td>
+				<td width="35%"><font face="Calibri" size="3">: &<TaskName>& </font></td>
+			</tr>
+			<tr>
+				<td width="15%"><font face="Calibri" size="3"><strong>Task Initiated By</strong></font></td>
+				<td width="35%"><font face="Calibri" size="3">: &<InitiatedBy>& </font></td>
+			</tr>
+			<tr>
+				<td width="15%"><font face="Calibri" size="3"><strong>Task Initiated On</strong></font></td>
+				<td width="35%"><font face="Calibri" size="3">: &<InitiatedOn>& </font></td>
+			</tr>
+			<tr>
+				<td width="15%"><font face="Calibri" size="3"><strong>Due Date</strong></font></td>
+				<td width="35%"><font face="Calibri" size="3">: &<DueDate>& </font></td>
+			</tr>
+			<tr>
+				<td width="15%"><font face="Calibri" size="3"><strong>Instructions</strong></font></td>
+				<td width="35%"><font face="Calibri" size="3">: &<Instructions>& </font></td>
+			</tr>
+			<tr>
+				<td width="100%" colspan="4"><span style="font-family: Arial; font-size: 8pt"><font color="#0000FF">&nbsp;&nbsp; </font></span></td>
+			</tr>
+        </table>
+        </font>
+        <font face="Calibri" size="3"><p>To view the complete details of the initiated task, kindly click on the following link:<strong> <a href="&<WebServerAddress>&/webdesktop/login/mailloginclient.app?AppServerIP=&<OAPWebServerAddress>&&EngineName=&<EngineName>&&CalledFrom=M&UserName=&<AssignedTo>&&ProcessInstanceId=&<ProcessInstanceId>&&WorkitemId=&<WorkItemId>&&QueueId=&<QueueId>&&ActivityType=&<ActivityType>&&QueueType=U&&taskid=&<TaskId>&">Open Case</a></strong></p></font>
+        <font face="Calibri" size="3"><p><strong>Disclaimer:</strong> This is an auto generated email, kindly do-not reply to this mail.</p></font>
+        <br>
+        <table border="0" cellSpacing="1" width="275px">
+            <tr>
+                <td><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAjCAYAAAADp43CAAAKGElEQVR42u1aC3BU1Rm+Ca8ASchjH/eGhGz2cc/ZtbVQ7IxjbYlCCFpeVkFrEmTo6NR2aIvySLJ779ZHgdBaS4ultEqrdYTK8KgdLX0gztgpyjAttkwBkYegFJLs3jXhFSRsv//uLtxs7m52AXUI3JkzN3v3nHPP+c73///3/xtB6OOKPiQM0hTLOE2xL9dUcZemSifQzmlBqRv3j8Oq1In2blgRV2p++7TjzTZ7MCjkCtcvQegIFljaA7bpmiJtCKviCS1YFk3bVPEYAR32W289OFvIu2aBi/gtN2lB+5tg1pk+QUsJptQRCYrrTjQPt19T4GmNeQ4w6ZBuor1B+VhTxN1h1foc+vwgotoXg3Ebdeap0vneQErdYcX+5//NzbdeE+CFFxWPCinSniTQzsF8j4b89l+3NheNjpr4tx3wk+GA9U4tIG6GuYeN4IPFXWG/7RnMPaJfg3dkXmFJSBGfjwWIC5tHwLC/EvYX35rJHAA3r0OxzgZLd2Ces4Z52rRm6xwKSP0SvKgg5Gp+6wPYaGti0yH4ME21rTjlH1qR1VxBYWDIX3ILQHzjglnjHlbt/4zMH1HV/8ALCoM1irRB6aQhmv77UPMwKdUYX7A6v3ZZwzu1LfUHJyyt/1rKKL6wgBkDEUXyoNDPJE5nc/HnIor9uYvglZ0if5ZuzPgfTrXXLK3bXNsy6zRA3Hfb4rqpwgxhgFlfuIX54aDUdYHZAduC/hU4VNvDYMb7FwG0v5iq71efvK9iwpL66urg7LyvNM2w1iytX13b0tA5cVnDgZol9d8QTNilNRY5wMK/J+ZH5N6e3IdzPi7RnE6njEc5V49sUcQ18FHdcdONtAdKvWb9qoPTi2qX1rUAsL2TWuqaBETjmpapZRNb6paDhR24vymM7R0kdpGLUG2PAsTTOgMVsaM9kN/jHT4v35toXJYX49GAqwdAChYx8Lo1xTonbRoGMx2/pK4JpttRu2zW2YlL6pY7Zlf3mXG0flvIj6jiy/Gg0hVSe5rxDT5vNNF8nK/Go4FXE4BnE1IDWu/mDIbkALgFYGLrxJaGA+MX3z85I1cREJeF1bIuXVwHxLX9CcBz8Qi5vSNgYZmOg8k+ULP4/u9SRM6kf5vfVodgEtJZqNo39B8AlRiAoYD4SmhhSXk2Y+/42R1DMg9WlimRoHQ8pgmlTRkCmFtQUGAZWVBQKlye/BlosVgKcM+2wDHM5XLdguB2N3e5xpquARvS4gx8NtI4oviTOqiTC4eV4V3vxdI88bepAPQy9gJzu+cgoJw3tgvfe/mGioqKsl7alLE69DutHwIFI+6ZzGXPerM58PcpvKPeLFhVVVUxr5e9lfz+xHjcuzhnK0eNGhXDKqxIe+PR8TcfBQtLPikAjzWOcALAA9CZZ9oCtodTAsjZfiyyG/cPsdA30Lbg7yOGDXQzxgJut3tIGgAPYNxmjOtA2w1AXgWzt+N5Z2IeHMR+j8dTY5RMDodD9HJ5Dfqci8/TjnleR98/4vk2fD4be+7t5Fx+ULcUyJj1OgMV8fcnmm0pS09YcCGjRXIeZFVVN9Jg7vFM1j+7XLf1ZWJUlIXpHo0JdcvkVADGF36IMfc9siRZsKkiWZbv8nK+/yLI/ANXebk7FYBoJwksAPcadCXl8bm4ezhjqw0g45Dk591uMVEpyqH9APDWxHsgqYLl5eU6qSorK6sY86w0WMI2zkeWUnRcpJepVOkvJHpTAQBfUOHj7E86nZm7HhvL83F5FX2G2T2BLmkLBe1+6916UUGRwlS4SOkDMR/zeL6VPB4gPtKjD/MsSAMg9XkXh35z0h7cxE4DCAcTfYjRXuYJGE290mKRkszbjjG70KcNh7MR4I4Uwk22LyMq/gsb2x1utt2YDkAM3qwvzsdiAPr4qthi2ZN9ARgKWB4E0zWkjRuTv0sy4dNxh9/jslqt+QnT0tnB2da0AHK2OsEe48WYvNYAcjdYRxlUjt1uHw4AnzauBe8UkyUcgYarlPonrC6nLWCpBjsOa4rtsa3V5hLicgAkZsNVbEGg2mn2fYYyZhBM8G1jX4qSqQHkc81dUdU9xjngy16SJEmfx+vxTMAcR40A40D3gO1PcO6e4nLpbiPXpCJTWBJRpV9RHS86Xxh+xQEM2L4O8A5HFHHmZQA4AD7rJWNf0KswWwAZc03qyXh5fZxNAgezwMKfkg9NdivYexhm+zeA6Ye539ArX9diLNwTUkpmXkkAqRLdHrCtCKv2tR1Nup67ZADpO2Pf4uKLVe5MAQSTJibJpo0JAOkiiQSQHgfzzpgEt/N4fgruYbtXlqf3WCfsIUfz21T4w33RGcLgKwVga6N1DNj3ViRgvz0VQzMEcCD816YePkoQ8rMFUJadd/Z8H1tnBDBxWIWFhSUIZi34/rAZkCRxqmJqJMncvi8UYcM/DgVKJlF1+VIBpJ81PwqUzg0FbMqxFG7BPIjIfzU7DJ/PNxin32XY+PF0QcTrleeZ+SvIo0XG9yG6z0s6sBySTibLzMXYGRSBDVH8A/PqSXC42KaU1iMzGRuNF0qzAfDIPGGoppZOC6nWez986KKjzwxA1kFzJ/eB8sfaWbdBC65JByCCw1MUuZPnIVFtYNIJiGldkzJEfui+R2DSTyNYvWiW9vl8wmBE/02GtUbSl6CaR3zx+NwhrmwAJMBaG4vGtC4o9EQz/A+FJAC78a5ZvXyX7F5h1Ghw5A19yJidJJ6T3NBYymoMh7CDO52fj+vMkfj8Pkklir6y7LrP1AoYe82w1nf63NyOscKgKFqGAOYcrBbyojOyK4gm+RZqXR6HY3Q80uVAekzpkQ9zdtBbWSmlAzAO4hYh5idzKDiAPX8gcBLvAuOeSjCNclsOH2tIGTvd7soxSdnYFEOaRwmEkvEmMbjcF6f/BQB55kK6LwBpYWDZY7LLdS+YcCCF4w4hnVxGOWu6YkLchNdwzrcagTf42X1eWWd5j4Mm4Y3AQdnIUbNx8XWcwb5f5253dVYVIlo0FrQu7qAbCECc4M9jJ62X4QdfKoAY/yPoryeY03kTsQW59e043Wew2H+g/QeAbvMy+QWkkDNxkKb/5WAWhWGWX6B8lgIT2Pg2MRLztmDz41IdOAUQYhrGraICgs52zo7Cd/4Xa3gVzx+N68DsfnagiamMQ4tDNPomAYZNPx5Pq5YnV0eyuUhGlAvCUOOJUjpHh6YzH/ciXOl+bEolY+ig4X5sjFWU0T2RdfR10fsr4SYgVSpBHAetQxT1wsMlE2UQAFNiiTyjRH4ATvg7cXPZAPoP/SwLw5nqwM/0ohITFnkMSv0Xuqkx1zRatM/r1WSHg18HMIMLumk0FTrhbL9HrES4vwu+5T09/MPPwE88i/YTzjy/BO1d1wE0ueBHLLLsbiK9Rv5Ldjq/BMBepiqyVy+Gen5HvyV8mj8OUTEUAninXoFGg7XUfRrv/T+RDNM23iDzjQAAAABJRU5ErkJggg==" />
+                </td>
+                <td>
+                    <font face="Calibri" size="3">
+					<table border="0" cellSpacing="1" width="100%">
+						<tr>
+							<td vAlign="bottom" width="100%" align="left">
+								<p>Regards,<br>System Administrator</p>
+							</td>
+						</tr>
+					</table>
+					</font>
+                </td>
+            </tr>
+        </table>
+        <font face="Calibri" size="3"><p><strong>Powered by: Newgen Software Technologies Ltd.</strong></p></font>
+        <br>
+    </form>
+</body>
+
+</html>

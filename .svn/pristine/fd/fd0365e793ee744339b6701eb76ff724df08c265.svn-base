@@ -1,0 +1,57 @@
+<Tables>
+  
+	<TableInfo>
+        <TableName>ActivityTable</TableName>
+        <ColumnInfo><Name>Activityicon</Name></ColumnInfo>
+    </TableInfo>
+	
+	<TableInfo>
+        <TableName>TEMPLATEDEFINITIONTABLE</TableName>
+        <ColumnInfo><Name>TemplateBuffer</Name></ColumnInfo>
+    </TableInfo>
+	
+	<TableInfo>
+        <TableName>ACTIONDEFTABLE</TableName>
+        <ColumnInfo><Name>IconBuffer</Name></ColumnInfo>
+    </TableInfo>
+	
+	<TableInfo>
+        <TableName>PROCESSINITABLE</TableName>
+        <ColumnInfo><Name>ProcessINI</Name></ColumnInfo>
+    </TableInfo>
+	
+	
+	<TableInfo>
+        <TableName>PRINTFAXEMAILTABLE</TableName>
+        <ColumnInfo><Name>CoverSheetBuffer</Name></ColumnInfo>
+    </TableInfo>
+	
+	
+	<TableInfo>
+        <TableName>WFFORM_TABLE</TableName>
+        <ColumnInfo><Name>FormBuffer</Name></ColumnInfo>
+    </TableInfo>
+	
+	
+	<TableInfo>
+        <TableName>TemplateMultiLanguageTable</TableName>
+        <ColumnInfo><Name>TemplateBuffer</Name></ColumnInfo>
+    </TableInfo>
+	
+	
+	<TableInfo>
+        <TableName>WFFormFragmentTable</TableName>
+        <ColumnInfo><Name>FragmentBuffer</Name></ColumnInfo>
+    </TableInfo>
+	
+	<TableInfo>
+        <TableName>WFBPELDefTable</TableName>
+        <ColumnInfo><Name>BPELDef</Name></ColumnInfo>
+    </TableInfo>
+	
+	<TableInfo>
+        <TableName>WFBPELDefTable</TableName>
+        <ColumnInfo><Name>XSDDef</Name></ColumnInfo>
+    </TableInfo>
+	
+</Tables>

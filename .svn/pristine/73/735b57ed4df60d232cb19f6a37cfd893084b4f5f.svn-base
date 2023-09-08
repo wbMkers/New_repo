@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ClientInfo>
+	<ProviderUrl>ormi://</ProviderUrl>
+	<jndiServerName>127.0.0.1</jndiServerName>
+	<jndiServerPort>3300</jndiServerPort>
+	<ApplicationServerName>Oracle10G</ApplicationServerName>
+</ClientInfo>

@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!DOCTYPE orion-ejb-jar PUBLIC "-//Evermind//DTD Enterprise JavaBeans 1.1 runtime//EN" "http://xmlns.oracle.com/ias/dtds/orion-ejb-jar.dtd">
+<orion-ejb-jar deployment-version="9.0.3.0.0">
+	<enterprise-beans>
+		<message-driven-deployment	name = "SetAndComplete1" 
+									destination-location = "queue/OFDefaultQueue" 
+									connection-factory-location = "QueueConnectionFactory/JMSQueueConnectionFactory">
+		</message-driven-deployment>
+		<message-driven-deployment	name = "SetAndComplete2" 
+									destination-location = "queue/NewgenCreate" 
+									connection-factory-location = "QueueConnectionFactory/JMSQueueConnectionFactory">
+		</message-driven-deployment>
+	</enterprise-beans>
+</orion-ejb-jar>

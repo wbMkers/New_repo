@@ -1,0 +1,12 @@
+DeclineTask=Y
+InitiateTask=Y
+AutoInitiateTask=Y
+CompleteTask=Y
+ReassignTask=Y
+MailingUtility=Y
+ImportUtility=Y
+UserDiversion=Y
+WorkItemSuspension=Y
+RevokeTask=Y
+ApproveTask=Y
+RejectTask=Y

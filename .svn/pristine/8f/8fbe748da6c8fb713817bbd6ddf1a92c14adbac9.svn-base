@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ClientInfo>
+	<ProviderUrl>corbaloc:iiop:</ProviderUrl>
+	<jndiServerName>127.0.0.1</jndiServerName>
+	<jndiServerPort>2809/NameServiceServerRoot</jndiServerPort>
+	<ApplicationServerName>WebSphere</ApplicationServerName>
+	<JndiContextFactory>com.sun.jndi.cosnaming.CNCtxFactory</JndiContextFactory>
+	<WFSHLookupName>WFCustomClientServiceHandlerBean</WFSHLookupName>
+		<Debug>
+                <TransactionLog>True</TransactionLog>
+                <XMLLog>True</XMLLog>
+        </Debug>
+</ClientInfo>
